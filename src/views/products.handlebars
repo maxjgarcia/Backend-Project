@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>Lista de Productos</h2>
+  <table>
+    <tr>
+      <th><span>ID</span></th>
+      <th><span>Nombre</span></th>
+      <th><span>Descripción</span></th>
+      <th><span>Categoría</span></th>
+      <th><span>Precio</span></th>
+      <th><span>Stock</span></th>
+    </tr>
+    {{#if productsLimited}}
+      {{#each productsLimited}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.title}}</td>
+          <td>{{this.description}}</td>
+          <td>{{this.category}}</td>
+          <td>{{this.price}}</td>
+          <td>{{this.stock}}</td>
+        </tr>
+      {{/each}}
+    {{/if}}
+
+    {{#if productById}}
+      {{#each productById}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.title}}</td>
+          <td>{{this.description}}</td>
+          <td>{{this.category}}</td>
+          <td>{{this.price}}</td>
+          <td>{{this.stock}}</td>
+        </tr>
+      {{/each}}
+    {{/if}}
+    {{#each products}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.title}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.category}}</td>
+        <td>{{this.price}}</td>
+        <td>{{this.stock}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
